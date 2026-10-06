@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "SavedMission": {
+      "title": "SavedMission",
+      "description": "User saved orbital mission scenario",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "objective": { "type": "string" },
+        "centralBody": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "name"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Private user profile"
+    },
+    "/users/{userId}/savedMissions/{missionId}": {
+      "schema": "SavedMission",
+      "description": "User saved orbital missions"
+    }
+  }
+}

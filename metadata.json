@@ -1,0 +1,6 @@
+{
+  "name": "PHYSICS-ACCURATE ORBITAL MISSION PLANNER",
+  "description": "Real-Time Space Mission Simulation & Analysis Platform. Design, simulate, analyze, and navigate high-fidelity orbital trajectories, Hohmann transfers, and maneuvers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
